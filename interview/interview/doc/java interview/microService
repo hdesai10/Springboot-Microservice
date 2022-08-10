@@ -1,0 +1,148 @@
+
+?) explain microservice architecture?. what are the microservice are?
+ - Micro-service itself in way you build your application by breaking them down in to small small pieces, and deploy them
+   separately on separate process possibility and on separate machines, and have them talk to each other
+   ,so they can work together to form application.
+ - Micro services are independent and self-efficient in way even though they one micro service going to talk with other
+   in order to do something valuable.
+   - key thing to remember here is these are separate processes when deploy and when they are running, and not tied to each other.
+   - they are fairly independent.
+   -usually micro-services communicate via APIs. common choice is rest API and common payload is json.
+ -we can take the example of amazon business domain and it has 20 functionality. such as login,product, add to cart, sponsored product, show related items.
+    we can make micro services each functionality, and make them talk to each other.and that we can call as microservice architecture.
+
+ ?) What are the advantages of microservices?
+      - Independent development for specific functionality and you can manage and controlling it totally.
+      - Independent deployment. we do not have to wait for all the services to be ready for deployment. we can just deploy independent service. if there are some changes to service,
+        we can make to changes to that service and redeploy service again. we do not need to re-deploy the complete architecture here. In Monolithic we do need to redeploy whole application if there are some changes.
+      - Fault Isolation: Even if one service of the application does not work, the other microservices or other functionality still be working. In monolithic architecture if one of the
+        service fails whole application goes down.
+      - Mixed Technology Stack: Different languages and technologies can be used to build different services of the same application.
+      -Granular Scaling: This is very important. if we need to scale specific service based on use we can just scale specific service and we do not need to scale whole application.
+
+ ?) What are the features of Microservices?
+    -Decoupling : your application is easily decoupled or rather have separate individual functionality. means easy development, deployment, and maintenance.
+    -componentization: Every micro-services are treated as individual component and can be easily replaced and upgraded.
+    -Business Capabilities: we can focus much better on business capabilities since we are focus on smaller goal and individual functionalities.
+    -Autonomy: Developers and team not depends on other team and it increases the speed of development.
+    -Continuous Delivery : allow frequent release of software through automation of software creation, testing , and approval.
+    -Responsibility: Means every team responsible for brining their product up and running. they are responsible for everything start to finish. They are responsible for build, test, and deploy and
+                    carry on with life cycle.
+    -Decentralized Governance:  Since every team working on separate service. They have freedom to choose the right technology for their problem.
+    -Agility: Microservice support agile development. ANy new feature can be quickly developed and discarded again base on bussiness needs.
+
+?) What are the characteristics of microservices ?
+    - better Organized on business capabilities: Since we have individual micro-services, we will have separate database for individual mircro-services. so lets say you have 10 micro service you will
+     have 10 database and each will responsible their corresponding micro-services. Means it better organization because each micro-service is very clear on what it supposed to do.
+    -Products not projects: each team responsible for its product and not on the project. They are totally responsible for that product.
+    -smart endpoint and dump pipes: basically that means you will have different end point for micro services. we should have design in way that it is easy to integrate with other application.
+    -Decentralized Governance:  Since every team working on separate service. They have freedom to choose the right technology for their problem.
+    -decentralized data Management : you have separate data base for each micro services.
+    -Infrastructure Automation : Since we will have many micro-services in application it is very important that we have proper automation to make sure speedy development.
+    -Design for Failure: if something goes wrong we need to make sure that it does not affect other micro services.
+
+?) What are the best practices to design Microservices ?
+    - Separate data store for each Micro-service:
+    - Keep code at similar level of maturity: In micro-service you have freedom to build micro service by your chosen language, but those micro services should be similar level of
+      understanding in perspective of business domain. Means all the team on same page even they ara working on different services.
+    - Separate build for each micro services:
+    - deploy in containers :
+    -Treat server as stateless:
+
+?) what is DDD( domain Driven Design )?
+    - It is approach that let team to collaborate together, and simply the creation of complex application.
+    -DDD focus on 3 principles
+        1. Focus on the core domain and domain logic. In this principle focus on what domain needs and what will be include in domain design.
+        2. Find complex deign on models of the domain.
+        3. Constantly collaborate with domain experts to improve the application model and to resolve any domain related issue.
+
+?) What is Ubiquitous language(UL)
+    - It is common language used by developers and users for common specification for the domain that they are working on.
+    -UL brings all the team member on the same page.
+    -UL has to be a crystal clear language so that it can be translated into software that a machine can understand.
+
+2) Name commonly used tools for Microservices?
+    - wire mock
+    - docker
+    - Hysrix - is library which allows you to do , it belongs to class of things where you addressing a cross-cutting concerns
+    - postman
+
+3)  What is Monolithic Architecture?
+  - Monolithic architecture is like a big container in which all the software components of an application are clubbed inside a single package.
+
+
+
+5) What is Spring Cloud?
+
+    need to work on this questions,
+   - Spring cloud is bunch of libraries and solutions which allow us to tackle some of this cross-cutting concerns.
+   - there all these patterns that has been developed with micro-services. like you have service discovery pattern , fault tolerance pattern,
+    configuration pattern. what spring cloud does is it's provide all this library under this umbrella called spring cloud.
+    Spring cloud is family of solutions which allow you to implement standard patterns with micro services.
+
+    - look up
+
+ 6) Discuss uses of reports and dashboards in the environment of Microservices
+    -not sure
+    -may be they asking monitoring micro services
+    - we do need to monitor micro-services when we have so many of them running at the same time. we need to make sure
+      they all running fine. they are not consuming lot of vm resources, not running out of memory. you need to know this
+      . we need a robust monitoring solution and alerting solution so that your support team knows when something goes down.
+
+  7) What are main differences between Microservices and Monolithic Architecture?
+     Microservices
+      -Service Startup is fast.
+      -Microservices are loosely coupled architecture.
+      -Changes done in a single data model does not affect other Microservices.
+      -Microservices  focuses  on products, not projects
+
+     Monolithic
+      -Service startup takes time
+      -Monolithic architecture is mostly tightly coupled.
+      -Any changes in the data model affect the entire database
+      -Monolithic put emphasize over the whole project
+
+   8) What are the challenges faced while using Microservices?
+    - deployment is more complex
+    - monitoring is complex
+    - managing product release is complex.
+    - Microservices always rely on each other. Therefore, they need to communicate with each other.
+    - If you are using Microservice architecture, you need to ready for operations overhead.
+    - You need skilled professionals to support heterogeneously distributed microservices.
+
+   9) In which cases microservice architecture best suited?
+      - Microservice architecture is best suited when you have large application with multiple teams working on it.
+      - and we need have for scaling or portion of application need scaling.
+      - testing is easier
+
+   11)What are the characteristics of Microservices?
+
+
+
+   12) what is RestFul ?
+
+   REST stands for Representation State Transfer and is just a fancy way of saying that a server responds to create, read, update, and delete requests in a standard way.
+   The idea behind REST is to treat all server URLs as access points for the various resources on the server.
+
+    - Rest stand for representation state transfer.
+    -Restful is way to build your API  that follows the rest specifications. rest specification involve treating individual
+    resource and having end point that map to resource and having certain verbs in term of t
+    what you operate on that resource for example you have domain. you identify resources and lets say this are account entity
+     so entity becomes resource. and we do operation useing those resource using verbs such as get, delete, put, post.
+
+
+    13) Explain three types of Tests for Microservices?
+      unit test
+      integration test
+      acceptance test
+      contract testing
+
+ 14) What are Client certificates?
+    Client certificates is a digital certificate used to make authenticated requests to a remote server. It is termed as a client certificate.
+
+ 15) Explain the use of PACT in Microservices architecture?
+  It is an open source tool which allows testing interactions between service providers and consumers. However, it is separated from the contract made. This increases the reliability of the Microservices applications.
+
+  16)What is the meaning of OAuth?
+  OAuth is
+

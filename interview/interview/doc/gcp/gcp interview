@@ -1,0 +1,36 @@
+1) what is load balancing?
+    -A load balancer distributes user traffic across multiple instances of your applications. By spreading the load, load balancing reduces
+     the risk that your applications experience performance issues.
+2) what is pubsub ?
+   -pub sub is reliable, scalable, fully managed asynchronous messing service.
+    backbone for Highly available and Highly scalable solutions in google cloud.
+   - Auto scale to process billions of messages per day.
+   -it is low cost( pay for use )
+   -Use Cases: Event ingestion and delivery for streaming analytics pipeline
+   -so if you have a lot of data which is coming in for analytics, you can put it in pub sub and slowly you can take it out to data store wherever you want to store it.
+
+   how pub/sub works
+   The first thing that you do is create a topic.And to this topic, a number of publishers can send messages and a number of receivers or consumers can listen on to the topic
+    and process these messages through subscriptions.
+
+    step 1 : to create topic
+    step 2 : subscribers register to the topic
+             each subscription represents discrete pull of message from a topic:
+             multiple clients pull same subscription. messages split between clients.
+             multiple clients create a subscription each. each client will get every messages.
+
+
+
+3) what is cloud storage ?
+  -Cloud storage  is the most popular, very flexible and inexpensive storage service.
+   it is serverless: autoscaling and infinite scale. when we create bucket in store we do not need to specify size of the bucket.
+  -Store large objects using a key-value approach.
+    Treats entire object as a unit(Partial updates not allowed)
+  - access control at object level
+  - provides rest api to access and modify objects.
+  - store all file types - text, binary, backup, & archives
+        -Media files and archives, application packages and logs,
+        -backups of your databases or storage devices
+        -staging data during on-premise to cloud database migration.
+
+4) Data proc ?

@@ -1,0 +1,64 @@
+?) What is SpringBoot?
+   -what: Spring Boot is a framework for rapid application development build using spring framework
+    with extra support of auto-configuration and embedded application server like tomcat. jetty.
+   -Since it is stand alone, it is recommended for building Microservice.
+   -How: It provides Rapid application development.
+   -It heps us in creating efficient fast stand-alone applications which you can just run. it basically removes lot of configuration and dependencies.
+
+?) why would you use Spring boot?
+   -Easy to create stand alone, production grade application.
+   -provides different starters templates for simplification of dependencies and build configuration.
+   -Embedded server support
+   -No requirement of XML based configuration like Web.xml, Spring.xml
+   -Provide production ready features such as health-checks, information of application and other metrics also. (we need to add spring boot starter actuator dependencies to see that end point)
+
+?) Any hands on Spring Boot?
+   -Yes, I have worked on Spring boot. We have used Spring boot to create microservices. These microservice are rest Webservice.
+
+?) Which version of Spring boot have you worked?
+   -I have worked on Spring boot 2.0. It support minimum of java 1.8 and maven 3.3+ versions.
+
+?) Do you know latest version of spring boot. ( need to work on this question)
+   -current version of Spring boot is 2.2 and released on oct 17, 2019
+   -Major changes
+
+
+?) What is spring Initializer?
+   -Spring Initialized is used to quickly create project structure. We need to add dependency, select build tool like either Maven or Gradle and then generate project structure.
+
+
+?) What is spring boot-starter? what are the common starters you have used in your project?
+  -Starter are templates provided by spring boot that provide dependencies to our application. They are generally bundle of many dependencies.
+  -Spring-boot-starter-web, Spring-boot-starter-parent, Spring-boot-starter-jpa.
+
+?) What is the default embedded server in Spring Boot, and it's default port and how to change server port.
+   -Tomcat
+   -default port for Tomcat server is 8080.
+   -to change default server port. we need to change in application.properties (server.port : 8081)
+   -we can also change default server port by using command line -Dserver.port = 8081
+
+?) How to change default Tomcat embedded server?
+  -Yes, we can change default embedded server. We need to remove dependency of Tomcat from spring-boot-starter-web using exclude tag
+   and add dependency to pom.xml of any other server like undertow, Jetty, Netty.
+
+
+?) I need to add some properties where can we add in spring boot?
+   -application.properties file
+
+?)Where do you deploy your spring boot application?
+  -
+
+
+?) How to deploy your spring boot application as Jar or War?
+   -We used to deploying as Jar.
+
+?) I need to generate war from spring boot app?
+    - by default add <packaging/> as Jar. we just need to change to war.
+    - Provide scope of tomcat as "provided"
+    - Extended spring boot main application class with "SpringBoot servlet Initializer"
+
+
+
+
+
+

@@ -1,0 +1,205 @@
+-Object are created in heap memory and variable are created in stack memory.
+
+
+
+?) why java is so popular?
+    -There are two main reason for java popularity are 1. platform independence and 2. Object Oriented language.
+    -platform independence is also called build is once and run anywhere. java is one of the most popular platform independence language.
+     once we compile java program and build a jar, we can run jar in any other operating system where JVM is installed.
+
+    -Java achieves platform independence in a beautiful way. On compile a java file, it creates a class file which contain an internal representation called
+      bytecode. JVM converts bytecode to executable instructions. The executable instruction are different in different operating systems. so there are different
+      JVMs for different operating systems. A JVM for windows is different for a JVM for mac. However both JVM understand the bytecode and convert it to the executable
+      code for the respective operating system.
+
+     - Object oriented languages are just better than structure language.
+
+?) what is Java?
+   - Java is High level object oriented programming language, platform independence, multithreaded, and portable programming language.
+     It was developed by James Gosling in june 1991.
+
+?) what is difference between JDK, JVM, JRE.
+    JVM - java virtual Machine. runs the java bytecode. make java portable.
+          task of JVM : loads code, verifies code, execute code, provides runtime environment.
+
+    JRE - Java runtime environment. combination of libraries set + jvm. Libraries set are the required run time for code execution.
+          -It is the implementation of JVM. to run any java code JRE is minimum required.
+
+    JDK - Java development kit. it contains JVM + JRE (library set) + development tools. when you want to write program, compile, debug program such things those
+          are present in development tools.
+          -It is a full featured software development tools.
+
+?) what is bytecode?
+   -Java bytecode is the instruction set of the java virtual machine. Each bytecode is composed of one or in some cases two byte that present the instruction,
+    and along with zero or more bytes for passing parameters.
+
+?) what are the important difference between c++ and java.
+   -Java is platform independent. c++ is not platform independent.
+   -Java and C++ both are not pure object oriented languages. however, Java is more pure object oriented language except for primitive variables.
+    in C++ can write structural program without using objects.
+   -C++ has pointers (access to internal memory). java has no concept called pointers.
+   -In c++ programmer has to handle memory management. A programmer has to write code to remove an object from memory. In java, JVM takes care of removing
+    object from memory using a process called Garbage collection.
+    -C++ supports Multiple Inheritance. Java does not support Multiple Inheritance.
+
+?) List the features of Java Programming language?
+   -Object Oriented
+   -Platform independence
+   -portable
+   -secure
+   -robust ( robust meaning Strong and healthy). Java is a strong programming language as it uses strong memory management. The concepts like Automatic garbage collection, Exception handling, etc. make it more robust.
+   -Interpreted - Java uses the Just-in-time (JIT) interpreter along with the compiler for the program execution.
+   -High Performance - Java is faster than other traditional interpreted programming languages because Java bytecode is "close" to native code. It is still a little bit slower than a compiled language (e.g., C++).
+   -Multithreaded: We can write Java programs that deal with many tasks at once by defining multiple threads. The main advantage of multi-threading is that it doesn't occupy memory for each thread.
+                    It shares a common memory area. Threads are important for multi-media, Web applications, etc.
+
+   -Dynamic: Java is a dynamic language. It supports dynamic loading of classes. It means classes are loaded on demand.
+             It also supports functions from its native languages, i.e., C and C++.
+
+?) what is th role for a classLoader in Java?
+   -A java program is made up of a number of custom class and core class. when a program is executed , JVM need to load the content of all the needed class.
+     JVM uses a classLoader to find the classes.
+     Three type of classes are. System class Loader, Extension class loader, and Bootstrap class Loader.
+
+
+?) What is the platform?
+   A platform is the hardware or software environment in which a piece of software is executed. There are two types of platform, software based and hardware based. Java provides the software based platform.
+
+?) What are wrapper classes?
+  -A primitive wrapper class in the java programming language is one of the eight classes provided in the java.lang package to provide object methods for the eight primitive types.
+   All of the primitive wrapper classes in java are immutable.
+
+   Wrapper: Boolean,Byte,Character,Double,Float,Integer,Long,Short
+   Primitive: boolean,byte,char ,double, float, int , long,short
+
+?) what is auto boxing?
+   -Autoboxing is the automatic conversion that java compiler makes between the primitive types and their corresponding object wrapper class.
+    for example, converting int to an Integer, a double to Double and so on.
+   - Advantage: auto boxing  helps saving memory by reusing the already created object. It uses the static valueOf method. However wrapper classes created with new keyword are not reused.
+
+?) What is Casting ?
+   - Casting is used when we want to convert one data type to the another.
+    there are two types of casting.
+    1) Implicit casting : Implicit casting is done by compiler. Good example of implicit casting are all the automatic widening conversions.
+       int value = 100;
+       long number = value // implicit casting.
+    2) explicit Casting: Explicit casting is done through code.
+       example: long number1 = 2424234;
+                int number2 = (int)number1; // explicit casting.
+
+?) why do we need wrapper classes in java
+   - A wrapper class wraps around data types and give it object appearance.
+   - reasons to why we need wrapper classes.
+         -null is possible value.
+         -use it in collection
+?) what is mutable and immutable.
+   Mutable - Fields can be changed after object creation.
+             Generally provides a method to modify the field value.
+             Has getter and setter method.
+
+   Immutable - Fields cannot be changed after object creation.
+               Does not have any mdethod to modify the field value.
+               Has only getter method.
+?) Why String is immutable and final?
+    -Value of String Object once created cannot be modified. Any modification on a object a String creates a new String object.
+    -lets say we create string variable String str ="Hiren". this will create object in heap constance pool with content Hiren.
+      now lets say you create another String variable String str1="Hiren". before it create new object in String constant pool it will check if object is already created with same content if
+       it is created it will reference to that object and not create new object.
+      Duplicate not allow in string constant pool that is call caching.
+    - now lets if we concat str2.concat("Desai"). it will create new object in Heap.
+    -String Constant Pool :If string is mutable, changing the string with one reference will lead to the wrong value for the other references.
+    -Security: String is widely used as parameter for many java classes, e.g. network connection, opening files, etc. Were String not immutable, a connection or file would be changed and lead to serious security threat. ...
+
+
+    -Security: parameters are typically represented as String in network connections, database connection urls, usernames/passwords etc. If it were mutable, these parameters could be easily changed.
+    -Synchronization and concurrency: making String immutable automatically makes them thread safe thereby solving the synchronization issues.
+    -Caching: when compiler optimizes your String objects, it sees that if two objects have same value (a="test", and b="test") and thus you need only one string object (for both a and b, these two will point to the same object).
+    -Class loading: String is used as arguments for class loading. If mutable, it could result in wrong class being loaded (because mutable objects change their state).
+
+?) What is the differance between String and StringBuffer?
+   -String are immutable where stringBuffer is used to represent values that can be modified.
+   -when we have situation where values are modified number of times, stringBuffer has significant performance benefits.
+   -both String and StringBuffer are thread-safe.
+   -StringBugger is implemented by using synchronized keyword on all the methods.
+
+?) What is differance between StringBuffer and StringBuilder ?
+   -Every method present in String buffer is synchronized. No method present in stringBuilder is synchronized.
+   -at time only one thread is allow to operate on string buffer object. Hence StringBuffer is threadsafe. At time multiple threads are allow to operate on stringBuilder object and hence StringBuilder is not ThreadSafe.
+   -StringBuffer increases waiting time of threads and so relatively performance is low. threads are not required to wait to operate on StringBuilder object, so relatively performance is high.
+   -String buffer was introduce in java 1.0 and StringBuilder was introduce in 1.5.
+
+?)what is class?
+ - class is template. class can defines state and behavior that an object can exhibit.
+
+?) what is an object?
+  -Object is instance of a class.
+
+?)Object Oriented Programming (OOPs) Concept in Java
+Object-oriented programming: As the name suggests, Object-Oriented Programming or OOPs refers to languages that uses objects in programming. Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism etc in programming. The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function.
+    OOPs Concepts:
+        Polymorphism
+        Inheritance
+        Encapsulation
+        Abstraction
+        Class
+        Object
+        Method
+
+
+ArrayList implements List interface
+List Extends Collections
+
+
+
+?) what is array
+    Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+    An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.
+
+    - An Array is data structure that allows to store sequence of value.
+?) What is 2D array.
+   2D array is array of an array. It is also known as matrix.
+   -> how can you declare 2D
+    int a[3][4]; Means we have array of 3 row and 4 column.
+   lets declare array
+        int a [2][3]={{1,2,3},{4,5,6}}
+        i would be row and j would be column
+        for(i=0;i<2;i++);
+            {
+              for(j=0;j<3;j++)
+              {
+                sout(a[i][j])
+              }
+            }
+?) Introduction to linked list
+     /*
+     public class LinkedList<E>
+         extends AbstractSequentialList<E>
+         implements List<E>, Deque<E>, Cloneable, java.io.Serializable
+     {
+     /*
+
+     LinkedList extends list and queue. LinkedList has same operation as an arraylist, however underlying implementation of linked list is different from the arraylist.
+     ArrayList uses an Array kind of structure to store elements, so inserting and deleting from arrayList are expensive operations however, search of an arrayList is faster than linklist.
+     LinkedList	uses	a	linked	 representation.	Each	object	holds	a	link	 to	 the	next	element.	Hence,	insertion
+     and	deletion	are	faster	than	ArrayList.	But	searching	is	slower.
+
+?) what is differance of LinkedList and ArrayList
+    Both are the implementation of list interface.
+    -Arraylist is implement in help of concept dynamic array, and LinkedList is implemented in help of concept doubly linkedList
+    -Initial capacity of the arraylist is 10, and if access over than size increase the size by 50% percentage.
+    -insertion and deletion are time consuming since it has to update all the position in memory.
+    -linkedList will be fast when we have situation like insert a record in between two elements because it will just change position for previous and next node in memory where arraylist change position for whole arraylist
+    -ArrayList is faster since we have option to specify the position.
+    -Arraylist and LinkedList both maintain order of the insertion and both allow duplicate values.
+
+    ex. of declaration
+     LinkedList<String> al=new LinkedList<String>();
+     ArrayList<String> list=new ArrayList<String>();
+?)
+
+
+
+
+
+
+

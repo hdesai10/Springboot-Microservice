@@ -1,0 +1,39 @@
+?) What are Rest and restful webservices?
+    -A web service that communicate or exchange information using REST/architecture is called a restful web service.
+     or we can say it is REST architectural( stateless client-server architecture) style for developing applications that can be accessed over the network.
+      for example : we have one simple application that has employee database. application has simple @entity and repository and controller. In controller we have simple logic or and @Getmapping
+                   annotation to get data from data base by ID. now lets say we have post man is our clint. we raise GET request for specific ID to get result.
+                   now we get result from database to postman in JSON/EML format it is transfer of state. Database is transferred over network using HTTP protocol using rest APIs to client.
+
+
+    -Rest(representational state transfer) is architectural style.
+    -Rest defines a set of principles to be followed while designing a service for communication / dta exchange between 2 applications.
+
+
+?) What is a REST resource ?
+    Every content in the REST architecture is considered a resource.
+    for example we have client postman and It raise Get request to get some information and API talked to server and server goes to database and give that information back to
+         clint that call resource.so data or information pass around call resources.
+
+?) What is URI
+    URI stand for Uniform Resource Identifier. IT is used for identifying each resource of the REST architecture.
+    URI Format: <protocol>://<service-name>/<resourceType>/<resourceID>
+
+?) What are the HTTP Methods?
+   HTTP methods are way to intract with your server. We have 4 types of method. GET, POST, PUT, DELETE.
+
+
+?) What are the features of RestFul web service?
+    -The service is based on the client-server model.
+    -The service uses HTTP protocol for fetching data, query, execution or any other functions. we can access service from anywhere as long as we have access to it.
+    -The medium of communication between the client and server is call messaging.
+    -Resource are accessible to the service by means of URIs
+    -it follows the stateless concept where the client request and response are not dependent on others and thereby proves total assurance of getting the required data.
+    -These services also use the concept of caching to minimize the server calls for the same type of the repeated requests.
+
+?) What is the concept of statelessness in REST?
+    As per REST architecture, a RESTfl web service should not keep a client state of server. This restriction is called statelessness.
+    for example, lets say postman as client wants to raise get request. server is not going to remember if we clint need it in few minutes.
+    if clients wants to information clint has to raise request again
+
+

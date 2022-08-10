@@ -1,0 +1,11 @@
+?) what is Docker?
+   -Docker is a tool designed to make it easier to deploy and run applications by using containers.
+    Docker gives you a standard way of packaging your application with all its dependencies in a container.
+    Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package.
+
+?) What is container?
+    - A way to package application with all necessary dependencies and configuration.
+    - Portable artifact, easily shared and moved around.
+    - Make development and deployment more efficient.
+?)
+

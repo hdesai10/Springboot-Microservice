@@ -1,0 +1,84 @@
+ ?) why lambas?
+     - Enables functional programming
+     - Readable and concise code
+     - Easier to use APIs and libraries
+     - Enables support for parallel processing
+
+?) why do we need functional programming ?
+    - functional programming lets you do is really write better code more readable
+      code and so more maintainable code because if you think about it at the end of the day all we are doing is writing
+      machine code right machine instructions and there is a reason we don't write
+      assembly language code because it's hard to write and it's hard to maintain the
+      more complex your application code becomes the harder it is to write code
+      using that kind of a syntax and which is why you have all these other programming paradigms think of functional
+      programming as another programming paradigm which lets you write code which
+      is elegant in certain situations we are  not going to be done with
+      object-oriented programming Java is inherently an object-oriented programming language and it will
+      continue to be so this think of function programming is another tool in your toolbox.
+
+
+ ?) Lambda Expression
+    -Java Lambda expression are java's first step into functional programming.
+    -It is an anonymous function that doesn't have name and does not belong to any class.
+    -It provides a clear concise way to represent a method interface via an expression.
+    -It provides the implementation of functional interface & simplifies the software development.
+    -in lamda expression we do not need to define what type of method is.
+      what is return type.also do not need modifier. java compiler is smart enough to figure it out by itself.
+
+    syntax
+           parameter -> expression body
+           -> arrow operator is introduced in java through lambda expressions that divides it into two parts. i.e parameters & body.
+
+  ?) Lambda as an Object
+     - A java Lambda expression is essentially an object that can be assigned to a variable and passed around.
+
+  ?) Variable Capture
+     - Java lambda expression can access variables that are declared outside the lambda function body under certain circumstances.
+
+  ?) Method References as Lambdas.
+
+     - Static method reference
+     - Parameter Method Reference
+     - Instance Method Reference
+     - Constructor Method Reference.
+
+
+  ?) Functional Interface
+     - Functional interface is an interface that contain exactly one abstract method.
+     - It can have any number of default or static methods along with object class method.
+     - Java provides predefined functional interfaces to deal with functional programming.
+     - Runnable, ActionListener, Comparable are some of the examples of functional interfaces.
+
+
+ ?) Stream
+    Streams bring functional programming to Java and are supported starting in java 8.
+    Advantages:
+        -will make you a more efficient java Programmer
+        - Make heavy use of Lamda expressions
+        - ParallelStreams make it easy to multi-thread operations
+    A Steam pipeline consists of a source followed by zero or more intermediate operations and terminal operations
+      source ->filter ->sort->map->Collect->
+
+    Stream source- Stream can be created from collections, Lists, Sets, ints, longs, doubles, arrays, lines of a file
+
+    Stream operations are either intermediate or terminal
+        -Intermediate operations such as filter, map, or sort return a stream so we can chain multiple intermediate operations.
+        -Terminal operations such as forEach, collect or reduce are either void or return a non-stream result.
+
+    Intermediate Operations
+        Zero or more intermediate operations  are allowed.
+        Order matters for large datasets: filter first, then sort or map.
+        For every large datasets use ParalledStream to enable multiple threads InterMediate operations include:
+            anyMatch()                  flatmap()
+            distinct()                  map()
+            filter()                    skip()
+            findFirst()                 sorted()
+
+    Terminal Operations
+       One terminal operations is allowed
+         forEach applied the same function to each element.
+         collect saves the elements into a collection.
+         other options reduce the stream to a single summary element.
+                count()             min()
+                max()               reduce()
+                                    summaryStatistics()

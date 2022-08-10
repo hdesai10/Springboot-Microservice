@@ -1,0 +1,36 @@
+ 3 parts of a Kubernetes configuration file
+
+            0:45 - metadata and specification
+            1:54 - status
+3:35 - format of configuration file
+4:46 - blueprint for pods (template)
+5:59 - connecting services to deployments and pods (label & selector & port)
+           6:18 - connecting deployment to pods
+           6:59 - connecting services to deployments
+           7:37 - ports
+8:50 - demo
+
+
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80

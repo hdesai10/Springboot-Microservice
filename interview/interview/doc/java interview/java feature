@@ -1,0 +1,51 @@
+1) What are new features which got introduced in java 8.
+    -Lamda expression
+    -Stream API
+    -Deafualt methods in the interface
+    -static methods
+    -Functional Interface
+    -Optional
+    -Method references
+    -Date API
+    -Nashorn, javascript engine.
+
+?) what are the advantage of using java 8?
+    -compact code (less boiler plate code)
+    -more readable, manageable, testable
+?) What are functional interfaces?
+    -Functional interfaces are those interfaces which can have only one abstract methods.
+    -in an have any number of static method, default methods, No restriction on that.
+    -There are many functional interfaces already present in java such  comparable, Runnable
+
+?) what is lambda expression ?
+   lamnda expression is an anonymous function without name, return type, and access modifier and having one lamda (->) symbol,
+   for example: lets say we have one method regular method
+            : public void add(int a, int b)
+             {
+                sout(a+b)
+             }
+
+             Lambda expression:
+               (a,b) -> sout(a+b);
+
+2) Java 11 Features
+   - you may not use the programs for any data processing or any commercial, production, or internal business purposes
+     other than developing, testing, prototying, and demostraing your application
+   - oracle used to be yearly subcribtion for commercial use but that has changed to monthly fees.
+   - it is free for personal use.
+   -readig and writing files become easy with Path object and readString and writeString.
+   - Predicate.not -
+
+
+
+   - string methods.
+     "string".string.repeat(3)
+     "string".string.isblank() // will return true or false
+     "string".string.strip()   //
+     .lines()
+
+   // http was introduce in java 9 but ready to use in 11.
+   // java script engine "nashorn"
+
+
+

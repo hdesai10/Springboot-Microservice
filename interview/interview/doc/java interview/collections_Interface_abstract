@@ -1,0 +1,95 @@
+?) what is collection ?
+    -Java collection are multi value container. They are dynamic containers.
+    -Collection are use in situation where data are dynamic. Collection allows add, delete, update elements. We can perform operations like searching
+     ,sorting, manipulation, deletion. There are number of collection in java to choose from base on the requirement.
+    -Java interface provides many interfaces and classes.
+?) Java collection Framework Hierarchy ?
+
+  Interface
+        -Iterable(i)
+            -collection(i)
+                -List(i) : ArrayList, LinkedList, Vector classes implements List Interface. and stack class implements vector class.
+                -Queue(i) : PriorityQueue class implements queue interface.
+                -Set(i) : HashSet and LinkedHashSet implements set interface.
+
+    Map(i) -> HashMap and HashTable implements Map interface.
+    SortedMap(i) extends Map interface.
+
+    -Iterable: interface provides facilities of iterating the elements only in forward direction. It's root for all the collection classes. The collection interface along with its subclasses also implements all the iterable interface
+               Method: public boolean hasNext() – This method returns true if the iterator has more elements.
+                       public object next() – It returns the element and moves the cursor pointer to the next element.
+                       public void remove() – This method removes the last elements returned by the iterator.
+ ?) What is List?
+    - A java List is Interface that implements Collection Interface. List contains ordered collection of elements including duplicates elements.
+    - There are 3 types of List
+        1) ArrayList
+               :ArrayList is implements List interface where we can add and remove elements dynamically.
+                ArrayList obj = new ArrayList
+                methods : those methods are in java.utils.ArrayList package.
+                        Object[] toArray(),boolean add(collection c), int lastIndexOf(Object o) , void add(int i,object element), object clone(), object clear(), void trimSize()
+        2) LinkedList : Linked list implements List interface. Linked list is a sequence of links which contains items. Each Link contains a connection to another link.
+                        LinkedList list = new LinkedList();
+                        There are two types of LinkedList.
+                            1) single : Each node in the List store data of the node and pointer or reference to the next node in the list.
+                            2) double : each node have two references next and previous node.
+                    they moth have common methods:
+                                 boolean add(collection c), void addFirst(Object o), void addLast(object o), int indexOF(object o), int size(), boolean contain(), int lastIndexOf(Object o) , void add(int i,object element), boolean remove(object o)
+
+        3) Vector: vectors are similar to ArrayList. the main it is synchronized so it is thread safe.
+
+ ?) Queue : interface follows FIFO approach. It sorts data for us. Elements added first get removed first and element added last get removed last.
+            Queue<Integer>  queue = new LinkedList<>();
+            Methods in Queue:
+              add ,remove , offer, peek, poll
+
+
+============================================================INTERFACE===============================
+
+?) What is Interface,
+  -A interface are the bluePrint of class. Interface specifies what class must do. we can say interface defines a contact for responsibilities of a class.
+  -Like a Class Interface can have variables and methods, but all the methods are declare in interface are abstract and only methods signature.
+
+?) Why do we use interface ?
+  -So interface are use to achieve total abstraction.
+  -Since java does not support multiple inheritance in case of class, but by using interface it can achieve multiple inheritance.
+  -It is also used to achieve loose coupling.
+  -Interfaces are used to implement abstraction. So the question arises why use interfaces when we have abstract classes? The reason is, abstract classes may contain non-final variables, whereas variables in interface are final, public and static.
+  -we use interface keyword to create interface.
+
+?) when to use interface?
+  - lets consider simple example of vehicle like bicycle, bike, and car. They all some have common  functionalities. so we can create interface and put all these functionalities,
+   and let Bicycle, car, bike let  implements functionalities by their own way.
+
+?) Important points about interface or summary of article:
+   -We can’t create instance(interface can’t be instantiated) of interface but we can make reference of it that refers to the Object of its implementing class.
+   -A class can implement more than one interface.
+   -An interface can extends another interface or interfaces (more than one interface) .
+   -A class that implements interface must implements all the methods in interface.
+   -All the methods are public and abstract. And all the fields are public, static, and final.
+   -It is used to achieve multiple inheritance.
+   -It is used to achieve loose coupling.
+
+?)New features added in interfaces in JDK 9
+  From Java 9 onwards, interfaces can contain following also
+  Static methods
+  Private methods
+  Private Static methods
+
+========================================ABSTRACT==========================================
+
+?) What are the abstract classes?
+   -An abstract class in java act as a boundary between the implantation method and its functionality. Abstract classes are considered as those classes that hide the method implemention details
+    from the user and show only the method functionality. They are declare using keyword abstract.
+?) why do we need abstract classes in java?
+     -Abstract Classes support Dynamic Method Resolution in run-time
+     -They help users to achieve Loose Coupling
+     -Abstract Classes separate the Method Definition from the Inherited Sub-Classes
+     -They provide the Default Functionality of the defined method for all the Sub-Classes
+     -Abstract classes provide a Template for future specific classes
+     -The abstract class allows Code Re-usability
+?) what are the rules for using Abstract classes in Java.
+      -An abstract class must be declared using the abstract keyword.
+      -Abstract classes can include abstract and non-abstract methods.
+      -An Abstract Class cannot be instantiated.
+      -They can include constructors and static,non-static methods, and final and non-final variables.
+

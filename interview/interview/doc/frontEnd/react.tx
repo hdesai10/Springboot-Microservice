@@ -1,0 +1,17 @@
+command for react
+- npx create-react-app hello-world    : to create application. npx is npm package runner which get install when install node
+- npm start      : to start application
+
+?) What is react?
+    -It is JavaScript open source library for building user interfaces
+    -It is not a framework.
+    -react focus on the UI. React does not focus on other expects of your application like routing or http request. It is only responsible for rich user interfaces. React other libraries that would take care.
+    -Reach has rich ecosystem and plays really well with other libraries and it is more than capable of building full web application.
+
+
+?) Why Learn React?
+    -Created and maintained by facebook.
+    -more than 100k starts on Github
+    -Huge community.
+    -React is becoming very popular.
+    -

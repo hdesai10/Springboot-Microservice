@@ -1,0 +1,20 @@
+
+?) What is kubernetes
+    - Kubernetes is an open-source Container Management tool which automates container deployment, container scaling ,descaling, and container load balancing.
+    - Kubernetes is written in Golang, and it has huge community because is was first developed by google and later  donated to CNCF.
+
+    Nodes & Pods
+    - A node can be Physical machine, virtual Machine, or VM on cloud.
+    - Inside Nodes we have pods, there can be one or multiple pods in nodes.
+    - And inside pods we have multiple containers. E.g. Docker containers
+
+    Architecture ->
+    - Master nodes -> worker nodes -> pods -> containers.
+    - Master nodes manages both worker nods and pods
+
+    In a Cluster Kubernetes supports:
+    - No more than 5000 nodes
+    - No more than 150000 total pods
+    - No more than 300000 total containers
+    - No more than 100 pods per node
+
